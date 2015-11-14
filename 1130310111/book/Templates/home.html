@@ -1,0 +1,25 @@
+{% load staticfiles %}
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <title>Homepage</title>
+    </head>
+<body>
+<nav class = "navbar navbar-inverse navbar-fixed-top" role = "navigation">
+    <div class = "container">
+        <div class = "navbar-header">
+            <a href = "#" class = "navbar-brand">图书</a>
+        </div>
+        <div id="navbar" class = "collapse navbar-collapse">
+            <ul class = "nav navbar-nav">
+                <li class = "text-right"><a href = "http://127.0.0.1:8000/search/">查询书目</a></li>
+                <li class = "active text-right"><a href ="http://127.0.0.1:8000/post/">添加书目</a></li>
+                <li class = "text-right"><a href ="http://127.0.0.1:8000/view_all/" >预览书目</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<h1 align="center">图书查询系统</h1>
+</body>
+</html>

@@ -1,0 +1,79 @@
+﻿{% load staticfiles %}
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<title>Change</title>
+</head>
+<body bgcolor="#F0F8FF" >
+<nav class = "navbar navbar-inverse navbar-fixed-top" role = "navigation">
+  <div class = "container">
+    <div class = "navbar-header">
+      <a href = "#" class = "navbar-brand">图书</a>
+    </div>
+    <div id="navbar" class = "collapse navbar-collapse">
+      <ul class = "nav navbar-nav">
+        <li class = "active text-right"><a href = "http://127.0.0.1:8000/search/">查询书目</a></li>
+        <li class = "text-right"><a href ="http://127.0.0.1:8000/post/">添加书目</a></li>
+        <li class = "text-right"><a href ="http://127.0.0.1:8000/view_all/" >预览书目</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div style="padding-top: 50px;padding-left:550px;width: 300px;" align="center">
+<table class="table table-bordered table-striped" style=" width=80px " align="center">
+<form action='' method='GET'>
+  <tr>
+    <td colspan="3" style="background-color:#99bbbb;align="center"">
+    <font size="5px">Book Information</font>
+    </td>
+  </tr>
+  <tr>
+    <td height="30" width='100' align="center">Title: </td>
+    <td >
+        <input name="Title" value= "{{book.Title}}"  type="text" cols="40"></input>
+    </td>
+
+  </tr>
+  <tr>
+    <td height="30" width='100' align="center">ISBN:  </td>
+    <td><input name="ISBN" value="{{book.ISBN}}" cols="40" type="text"></input></td>
+
+  </tr>
+  <tr>
+    <td height="30" width='100' align="center">Author:</td>
+    <td><input name="AuthorID" value="{{book.AuthorID}}" cols="40" type="text"></input></td>
+
+  </tr>
+  <tr>
+    <td height="30" width='100' align="center">Publisher:</td>
+    <td><input name="Publisher" value="{{book.Publisher}}" cols="40" type="text"></input></td>
+
+  </tr>
+  <tr>
+    <td height="30" width='100' align="center">PublishDate:</td>
+    <td><input name="PublishDate" value="{{book.PublishDate}}" cols="40" type="text"></input></td>
+
+  </tr>
+  <tr>
+    <td height="30" width='100' align="center">Price:</td>
+    <td><input name="Price" value="{{book.Price}}" cols="40" type="text"></input></td>
+
+  </tr>
+ 
+<style type="text/css">
+input.form {
+  position: absolute;
+  left: 650px;
+  top: 320px;
+}
+</style>
+  <tr>
+    <td align="center"><input class="btn btn-primary" type="submit" value="Submit" align="center" class = "form" > </input></td>
+  </tr>
+
+</form>
+</table>
+</div>
+</body>
+</html>
